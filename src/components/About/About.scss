@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+.about {
+  width: 100vw;
+  background-color: var(--secondary-dark);
+  color: var(--primary-light);
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  display: flex;
+  height: 100vh;
+  padding: 4rem;
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14), 0 3px 8px rgba(0, 0, 0, 0.14),
+      0 4px 13px rgba(0, 0, 0, 0.18);
+    .left {
+      width: 50%;
+      height: 100%;
+      position: relative;
+      background-color: var(--primary-light);
+      color: var(--secondary-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      .top {
+        display: flex;
+      }
+      .bottom {
+        display: flex;
+        justify-content: center;
+      }
+      .top,
+      .bottom {
+        width: 90%;
+        height: 35%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem;
+
+        h1 {
+          font-size: 1.8rem;
+          margin-bottom: 0.5rem;
+        }
+        p {
+          font-weight: lighter;
+          width: 80%;
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+          span {
+            color: var(--accent);
+            text-decoration: underline;
+            text-decoration-style: double;
+          }
+        }
+      }
+      .bottom {
+        .skills {
+          width: 100%;
+          display: flex;
+          font-weight: lighter;
+        }
+        .client-skills,
+        .server-skills {
+          width: 100%;
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+
+          .skill {
+            font-size: 1.4rem;
+
+            display: flex;
+
+            .skill-icon {
+              margin-right: 0.75rem;
+              font-size: 1.6rem;
+            }
+          }
+        }
+        .server-skills {
+          width: 50%;
+          list-style-type: none;
+        }
+      }
+    }
+    .right {
+      width: 50%;
+      height: 100%;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      background-color: #0e0f13;
+      form {
+        display: flex;
+        flex-direction: column;
+        background-color: #0e0f13;
+
+        gap: 1rem;
+        width: 90%;
+        height: 80%;
+        // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14), 0 3px 8px rgba(0, 0, 0, 0.14),
+        //   0 4px 13px rgba(0, 0, 0, 0.18);
+        margin: 0 auto;
+        h1 {
+          font-size: 1.8rem;
+          span {
+            color: var(--accent);
+          }
+        }
+        button {
+          display: flex;
+          align-items: center;
+          padding: 14px 30px;
+          position: relative;
+          transition: 0.3s;
+          overflow: hidden;
+          text-transform: uppercase;
+          background-color: var(--primary-dark);
+          color: white;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 170px;
+          cursor: pointer;
+        }
+        .inpt,
+        textarea {
+          height: 50px;
+          outline: none;
+          color: white;
+          font-size: 1.5rem;
+          border: none;
+          background-color: #0e0f13;
+          border-bottom: 1px solid lightgray;
+          &:focus {
+            border-bottom: 1px solid var(--green);
+            transition: all 0.5s ease-in-out;
+          }
+          &:valid {
+            border-bottom: 1px solid var(--accent);
+
+          }
+        }
+        label {
+        }
+        textarea {
+          background-color: #0e0f13;
+          border: none;
+          border-bottom: 1px solid lightgray;
+          min-height: 200px;
+          font-family: "Poppins", sans-serif;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .about {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    .container {
+      .left {
+        .top {
+          h1 {
+          }
+          p {
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+          }
+        }
+        .bottom {
+          .skills {
+            .skill {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .about {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    .container {
+      flex-direction: column;
+      .left {
+        width: 100%;
+        padding: 2rem 1rem;
+        height: auto;
+        .top,
+        .bottom {
+          width: 100%;
+          padding: 0;
+          height: 50%;
+          border: none;
+          h1 {
+            margin-top: 0rem;
+            font-size: 2rem;
+          }
+          p {
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 1rem;
+          }
+          .skills {
+            .client-skills {
+              .skill {
+                margin-bottom: 1rem;
+              }
+            }
+            .server-skills {
+              .skill {
+                margin-bottom: 1rem;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        align-items: baseline;
+        width: 100vw;
+        border-top: 2px solid var(--accent);
+        padding: 0;
+
+        form {
+          width: 100%;
+          padding: 2rem 1.5rem;
+          position: relative;
+          height: auto;
+          border-radius: 0;
+          label {
+            margin-top: 1.2rem;
+          }
+          textarea,
+          input {
+            max-height: 50px;
+            box-shadow: none;
+            border-bottom: 1px solid lightgray;
+            border-radius: 0;
+            margin-top: 1rem;
+            &::placeholder {
+              visibility: hidden;
+            }
+          }
+          textarea {
+            min-height: 50px;
+          }
+
+          button {
+            width: 200px;
+            margin-top: 1.4rem;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
