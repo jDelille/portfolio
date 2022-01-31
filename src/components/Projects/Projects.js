@@ -200,7 +200,7 @@ function Projects() {
           </p>
           <div className="project-btns">
             <a href="#"> Visit site </a>
-            <Link to="/travel" className="link" target="_blank">
+            <Link to="/trekked" className="link" target="_blank">
               Learn More
             </Link>
           </div>

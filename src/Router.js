@@ -1,22 +1,17 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Projects from "./components/Projects/Projects";
 import About from "./components/About/About";
 import Shmagity from "./components/Details/Shmagity";
 import Contact from "./components/Contact/Contact";
-import ReactFullpage from '@fullpage/react-fullpage';
+import ReactFullpage from "@fullpage/react-fullpage";
 import Poolhost from "./components/Details/Poolhost";
 import Travel from "./components/Details/Travel";
 
-
 function Router() {
-
-  
-
-
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -29,11 +24,11 @@ function Router() {
         <Route path="/poolhostNFL">
           <Poolhost />
         </Route>
-        <Route path="/travel">
+        <Route path="/trekked">
           <Travel />
         </Route>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

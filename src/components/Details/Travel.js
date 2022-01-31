@@ -38,7 +38,7 @@ function Travel() {
             <p> Plan and organize your next trip </p>
           </div>
 
-          <img src="../images/shmagity-mac.png" alt="" />
+          <img src="../images/trekked.png" alt="" />
         </div>
         <div className="footer-info">
           <p>
@@ -57,11 +57,10 @@ function Travel() {
           </p>
           <p> This website was created using <span>React, Javascript, Sass, Node.js, Express, and MongoDB.</span> For the user authentication I used <span>Bcrypt and JWT</span> as well as implemented error handling for incorrect data during the login process. </p>
           <p className="disclaimer">
-            This website is not deployed yet since there is still some things I would like to include that will bring this project to life. I have included a demo video to show its current functionality.
+            This website is not deployed yet since there is still some things I would like to include that will bring this project to life.
           </p>
 
           
-          <a href="https://www.shmagity.com/">Demo</a>
         </div>
       </section>
       <section className="images">

@@ -18,8 +18,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Animation from "../Home/Animation";
 import emailjs from "emailjs-com";
 import { init } from "@emailjs/browser";
-
 init("user_9AzWABg48JM2r7AstLnjU");
+
 const About = () => {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -73,33 +73,36 @@ const About = () => {
 
   const form = useRef();
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [msg, setMsg] = useState("");
+  let [name, setName] = useState("");
+  let [email, setEmail] = useState("");
+  let [msg, setMsg] = useState("");
+
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    setName("");
-    setEmail("");
-    setMsg("");
+    
 
     emailjs
       .sendForm(
-        "service_jn6nq3n",
-        "template_kx800bb",
-        form.current,
+        "gmail",
+        "gmail-template",
+        e.target,
         "user_9AzWABg48JM2r7AstLnjU"
       )
       .then(
         (result) => {
           setSent(true);
+          console.log(result.text);
         },
         (error) => {
           console.log(error.text);
         }
       );
+      setName = '';
+      setEmail = '';
+      setMsg = '';
     setSent(false);
+
   };
 
   return (
@@ -111,16 +114,22 @@ const About = () => {
             <p>
               Hey there, I'm Justin, I'm a <span>Front-End Developer</span>.
             </p>
-            
+
             <p>
-              I love solving problems, learning about code, and creating websites with engaging and interactive experiences. 
+              I love solving problems, learning about code, and creating
+              websites with engaging and interactive experiences.
             </p>
-            
+
             <p>
               I am currently learning and polishing my skills with React,
-              Typescript, and using APIs. Also, on the road to rank 1 in Codewars.
+              Typescript, and using APIs. Also, on the road to rank 1 in
+              Codewars.
             </p>
-            <p> <span> Looking for work </span> and opportunities to gain experience.</p>
+            <p>
+              {" "}
+              <span> Looking for work </span> and opportunities to gain
+              experience.
+            </p>
           </div>
           <div className="bottom">
             <h1> Skills </h1>
@@ -133,8 +142,7 @@ const About = () => {
                   <SiJavascript className="skill-icon" />
                   Javascript
                 </li>
-                
-                
+
                 <li className="skill">
                   <DiCss3 className="skill-icon" /> CSS
                 </li>
@@ -143,7 +151,6 @@ const About = () => {
                 </li>
               </ul>
               <ul className="server-skills">
-                
                 <li className="skill">
                   <SiNodedotjs className="skill-icon" />
                   Node.js
@@ -151,7 +158,7 @@ const About = () => {
                 <li className="skill">
                   <SiMongodb className="skill-icon" /> MongoDB
                 </li>
-                
+
                 <li className="skill">
                   <SiFirebase className="skill-icon" /> Firebase
                 </li>
@@ -163,12 +170,16 @@ const About = () => {
           </div>
         </div>
         <div className="right">
-          <form ref={form} onSubmit={sendEmail}>
-            <h1> Let's talk <span>.</span></h1>
+          <form onSubmit={sendEmail}>
+            <h1>
+              {" "}
+              Let's talk <span>.</span>
+            </h1>
             <label htmlFor=""> Name </label>
             <input
               className="inpt"
               type="text"
+              name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -177,18 +188,19 @@ const About = () => {
             <input
               className="inpt"
               type="email"
+              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
             <label htmlFor=""> Message </label>
             <textarea
-              name=""
               id=""
               cols="30"
               rows="80"
               placeholder="..."
               required
+              name="msg"
               value={msg}
               onChange={(e) => setMsg(e.target.value)}
             ></textarea>

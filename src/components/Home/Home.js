@@ -35,6 +35,14 @@ function Home() {
     );
   }, []);
 
+  function scrollProjects() {
+    document.getElementById("projects").scrollIntoView(true);
+  }
+
+  function scrollAbout() {
+    document.getElementById("about").scrollIntoView(true);
+  }
+
   return (
     <div className="homepage" ref={ref}>
       <Navbar />
@@ -44,10 +52,10 @@ function Home() {
           <Animation copy="I'm a web developer." role="heading" />
         </div>
         <div className="btn-container">
-          <a href="#projects" className="projects-btn">
+          <a onClick={scrollProjects} className="projects-btn">
             Projects
           </a>
-          <a href="#about" className="contact-btn">
+          <a onClick={scrollAbout} className="contact-btn">
             Contact
           </a>
         </div>
