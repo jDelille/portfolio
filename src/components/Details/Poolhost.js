@@ -55,7 +55,7 @@ function Poolhost() {
         <div className="detail-intro">
           <h1> Introduction</h1>
           <p>
-            Poolhost is a website I created that allows a user to make weekly NFL picks. They can view current scores, betting odds, and even chat with other users.
+            Poolhost is the first full stack website I created that allows a user to make weekly NFL picks. They can view current scores, betting odds, and even chat with other users.
           </p>
           <p> This website was created using <span>React, Javascript, CSS, Node.js, Express, and Firebase.</span> I used Firebase for the database and user authentication because I wanted to learn more about how to use Firebase and it was perfect for the scale of this site. </p>
           

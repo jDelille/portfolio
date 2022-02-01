@@ -199,7 +199,7 @@ function Projects() {
             your trip and budget.
           </p>
           <div className="project-btns">
-            <a href="#"> Visit site </a>
+            <a> Upcomming </a>
             <Link to="/trekked" className="link" target="_blank">
               Learn More
             </Link>

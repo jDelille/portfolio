@@ -15,6 +15,7 @@ import {
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import Animation from "../Home/Animation";
+import SDemo from './mp4/shmag.mp4'
 
 function Shmagity() {
   return (
@@ -76,6 +77,12 @@ function Shmagity() {
           <p> Easily view and search for your code. </p>
         </div>
       </section>
+      <div className="demo-section">
+      <p>Watch the demo and see how it works.</p>
+
+      <video src={SDemo} controls="controls"></video>
+
+      </div>
       <div className="tech-used">
         <h1> Technologies Used </h1>
         <div className="skills-wrapper">

@@ -15,6 +15,7 @@ import {
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import Animation from "../Home/Animation";
+import TDemo from './mp4/trip.mp4'
 
 function Travel() {
   return (
@@ -57,7 +58,7 @@ function Travel() {
           </p>
           <p> This website was created using <span>React, Javascript, Sass, Node.js, Express, and MongoDB.</span> For the user authentication I used <span>Bcrypt and JWT</span> as well as implemented error handling for incorrect data during the login process. </p>
           <p className="disclaimer">
-            This website is not deployed yet since there is still some things I would like to include that will bring this project to life.
+            This website is not deployed yet since there is still some things I would like to include that will bring this project to life. I have included a demo video at the bottom.
           </p>
 
           
@@ -76,7 +77,12 @@ function Travel() {
           <img src="../images/travel-3.JPG" alt="" />
           <p> Start planning your next trip </p>
         </div>
+        
       </section>
+      <div className="demo-section">
+      <p>Watch the demo and see how it works.</p>
+      <video src={TDemo} controls="controls"></video>
+      </div>
       <div className="tech-used">
         <h1> Technologies Used </h1>
         <div className="skills-wrapper">

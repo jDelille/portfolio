@@ -180,6 +180,19 @@
       }
     }
   }
+  .demo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    flex-direction: column;
+    p {
+      margin-bottom: 1rem;
+    }
+    video {
+      width: 80%;
+    }
+  }
   .tech-used {
     height: 40vh;
     width: 100%;
