@@ -2,15 +2,27 @@
   height: 65px;
   position: absolute;
   display: flex;
-  width: 50vw;
+  width: 100vw;
   transition: all 2s ease-in-out;
+  padding: 0 2.5rem;
 
   .nav-contents {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 0 4rem;
     display: flex;
     align-items: center;
+    .icons {
+      margin-left: auto;
+      width: 200px;
+      display: flex;
+      justify-content: space-evenly;
+      .icon {
+        font-size: 2rem;
+        cursor: pointer;
+        color: white;
+      }
+    }
   }
   .brand {
     margin-right: 2rem;
@@ -38,13 +50,20 @@
 @media only screen and (max-width: 900px) {
   .navbar {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
     .nav-contents {
       padding: 0;
       .nav-links {
         margin-left: auto;
-        width: 50%;
+        width: 40%;
         display: flex;
         justify-content: space-between;
+        position: relative;
+        
+        li {
+          margin: 0 .5rem;
+        }
       }
       .hide {
         display: none;
@@ -87,6 +106,10 @@
 }
 
 .hide {
+  display: none;
+}
+
+.icon {
   display: none;
 }
 

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.scss";
 import $ from "jquery";
-import { FaBars } from "react-icons/fa";
-
+import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai'
 function Navbar() {
   function scrollProjects() {
     document.getElementById("projects").scrollIntoView(true);
@@ -47,7 +46,13 @@ function Navbar() {
               <a onClick={scrollAbout}> Contact </a>
             </li>
           </ul>
+          <div className="icons">
+          <a href="https://github.com/jDelille" target='_blank'><AiFillGithub className="icon" /></a>
+          <a href="https://www.linkedin.com/in/justin-delille/" target='_blank'><AiFillLinkedin className="icon" /></a>
+          </div>
+          
         </div>
+       
         {/* <div
         className="circle-nav"
           id={!expand ? "mini" : "expand"}

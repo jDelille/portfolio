@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { useEffect, useRef, useState } from "react";
 import "./About.scss";
 
@@ -12,6 +13,7 @@ import {
   SiPostgresql,
   SiFirebase,
 } from "react-icons/si";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { AiFillApi, AiOutlineSend } from "react-icons/ai";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -77,10 +79,8 @@ const About = () => {
   let [email, setEmail] = useState("");
   let [msg, setMsg] = useState("");
 
-
   const sendEmail = (e) => {
     e.preventDefault();
-    
 
     emailjs
       .sendForm(
@@ -98,11 +98,10 @@ const About = () => {
           console.log(error.text);
         }
       );
-      setName = '';
-      setEmail = '';
-      setMsg = '';
+    setName = "";
+    setEmail = "";
+    setMsg = "";
     setSent(false);
-
   };
 
   return (
@@ -125,8 +124,19 @@ const About = () => {
               Typescript, and using APIs. Also, on the road to rank 1 in
               Codewars.
             </p>
+            <p> Checkout my Github and Linkedin. </p>
+            <div className="icons">
+              <a href="https://github.com/jDelille" target="_blank">
+                <AiFillGithub className="icon-ab" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/justin-delille/"
+                target="_blank"
+              >
+                <AiFillLinkedin className="icon-ab" />
+              </a>
+            </div>
             <p>
-              {" "}
               <span> Looking for work </span> and opportunities to gain
               experience.
             </p>

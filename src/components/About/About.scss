@@ -26,6 +26,16 @@
       justify-content: space-evenly;
       .top {
         display: flex;
+        .icons {
+          width: 10%;
+          display: flex;
+          justify-content: space-between;
+          .icon-ab {
+            color: black;
+            font-size: 2rem;
+            margin-right: 1rem;
+          }
+        }
       }
       .bottom {
         display: flex;
