@@ -26,6 +26,13 @@
       justify-content: space-evenly;
       .top {
         display: flex;
+        .my-links {
+          margin-top: 1rem;
+          a {
+            color: var(--accent);
+            cursor: pointer;
+          }
+        }
         .icons {
           width: 10%;
           display: flex;

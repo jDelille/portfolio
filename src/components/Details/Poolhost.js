@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import PLDemo from './mp4/poolhost-demo.mp4'
 import Animation from "../Home/Animation";
+import NDemo from './mp4/nba.mp4'
 
 function Poolhost() {
   return (
@@ -36,15 +37,15 @@ function Poolhost() {
       <div className="detail-header">
         <div className="content">
           <div className="desc">
-            <Animation copy="PoolhostNFL" role="heading" />
-            <p> Weekly NFL pick 'em pool </p>
+            <Animation copy="NBA Pick'em" role="heading" />
+            <p> Daily NBA pick 'em pool </p>
           </div>
 
-          <img src="../images/poolhost_mac.png" alt="" />
+          <img src="../images/sock-mac.png" alt="" />
         </div>
         <div className="footer-info">
           <p>
-            <span>Context</span> Capstone Project
+            <span>Context</span> Personal Project
           </p>
           <p>
             <span>Type</span> CRUD
@@ -55,20 +56,32 @@ function Poolhost() {
         <div className="detail-intro">
           <h1> Introduction</h1>
           <p>
-            Poolhost is the first full stack website I created that allows a user to make weekly NFL picks. They can view current scores, betting odds, and even chat with other users.
+            Socklord Pick'em Pool is a website I created that allows a user to make daily NBA picks. They can view scores, betting odds, and live data.
           </p>
-          <p> This website was created using <span>React, Javascript, CSS, Node.js, Express, and Firebase.</span> I used Firebase for the database and user authentication because I wanted to learn more about how to use Firebase and it was perfect for the scale of this site. </p>
+          <p> This website was created using <span>React, Javascript, SCSS, Node.js, Express, and MongoDB.</span></p>
           
-          <p className="disclaimer"> With the season coming to an end, there is a lot less data on this website which is a huge reason why it is so awesome. In the near future I wish to also include NBA and MLB games to the site.</p>
+          <p className="disclaimer"> In the future this website will feature other sports as well as better features for the user to make their experience awesome.</p>
 
           
-          <a href="https://poolhostnfl.com/">Visit Site</a>
+          <a href="https://poolhost.netlify.app/">Visit Site</a>
         </div>
       </section>
+      <div className="demo-section">
+      <p>Watch the demo and see how it works.</p>
+      <video src={NDemo} controls="controls"></video>
+      </div>
       <section className="images">
         <div className="img">
-          <p> Watch the demo video to see how it works </p>
-          <video src={PLDemo} controls="controls"></video>
+          <img src="../images/sock-1.JPG" alt="" />
+          <p> Create an account or login to an existing one </p>
+        </div>
+        <div className="img">
+          <img src="../images/sock-2.JPG" alt="" />
+          <p> Make your daily NBA picks</p>
+        </div>
+        <div className="img">
+          <img src="../images/sock-3.JPG" alt="" />
+          <p> Review and edit your picks if needed </p>
         </div>
       </section>
       <div className="tech-used">
@@ -83,7 +96,7 @@ function Poolhost() {
               Javascript
             </li>
             <li className="skill">
-              <SiCss3 className="skill-icon" /> CSS
+              <SiSass className="skill-icon" /> Sass
             </li>
           </ul>
           <ul className="backend">
@@ -95,7 +108,7 @@ function Poolhost() {
               Node.js
             </li>
             <li className="skill">
-              <SiFirebase className="skill-icon" /> Firebase
+              <SiMongodb className="skill-icon" /> MongoDB
             </li>
           </ul>
         </div>

@@ -88,7 +88,7 @@ function Projects() {
           trigger: el.querySelector(".r-two"),
           start: "top center",
           end: "top center",
-          ease: Elastic.easeIn
+          ease: Elastic.easeIn,
         },
       }
     );
@@ -136,15 +136,64 @@ function Projects() {
     );
   }, []);
 
-  // image animation 
-
+  // image animation
 
   return (
     <div className="projects" id="projects" ref={ref}>
+      <div className="project-box">
+        <div className="left l-two">
+          <h1 className="header"> featured project </h1>
+          <h1 className="site"> NBA Pick'em </h1>
+          <p className="desc">
+            Socklord Pick'em Pool is a project I created. It's an NBA daily pick
+            'em pool where users make picks and compete against others.
+          </p>
+          <div className="project-btns">
+            <a
+              href="https://poolhost.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit site
+            </a>
+            <Link to="/poolhostNFL" className="link" target="_blank">
+              Learn More
+            </Link>
+          </div>
+        </div>
+        <div className="right r-two">
+          <img src="../images/sockpool.JPG" alt="" />
+        </div>
+      </div>
+      <div className="project-box">
+        <div className="left l-three">
+          <h1 className="header"> featured project </h1>
+          <h1 className="site"> Pixelator </h1>
+          <p className="desc">
+            Pixelator is a website where you can make pixel art and download it
+            as a JPG or PNG.
+          </p>
+          <div className="project-btns">
+          <a
+              href="https://pixelator123.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit site
+            </a>
+            <Link to="/pixelator" className="link" target="_blank">
+              Learn More
+            </Link>
+          </div>
+        </div>
+        <div className="right r-three">
+          <img src="../images/pixelator.JPG" alt="" />
+        </div>
+      </div>
       <div className="project-box box-1">
         <div className="left l-one">
           <h1 className="header"> featured project </h1>
-          <h1 className="site"> Shmagity.com </h1>
+          <h1 className="site"> Shmagity </h1>
           <p className="desc">
             Shmagity is a website I created that allows a user to store and save
             their reuseable lines of code. You don't just save code, you save
@@ -167,46 +216,6 @@ function Projects() {
           {/* <img src="../images/spiral.png" alt="" id="spiral"/> */}
 
           <img src="../images/shmagity.png" alt="" className="shmag-img" />
-        </div>
-      </div>
-      <div className="project-box">
-        <div className="left l-two">
-          <h1 className="header"> featured project </h1>
-          <h1 className="site"> poolhostnfl.com </h1>
-          <p className="desc">
-            Poolhost is a project I created for my capstone. It's an NFL weekly
-            pick 'em pool where users get the chance to compete against others.
-          </p>
-          <div className="project-btns">
-            <a href="https://poolhostnfl.com/" target="_blank" rel="noreferrer">
-              Visit site
-            </a>
-            <Link to="/poolhostNFL" className="link" target="_blank">
-              Learn More
-            </Link>
-          </div>
-        </div>
-        <div className="right r-two">
-          <img src="../images/poolhost.png" alt="" />
-        </div>
-      </div>
-      <div className="project-box">
-        <div className="left l-three">
-          <h1 className="header"> upcomming project </h1>
-          <h1 className="site"> Travel Planner </h1>
-          <p className="desc">
-            Travel app is a project I am currently working on. It helps you plan
-            your trip and budget.
-          </p>
-          <div className="project-btns">
-            <a> Upcomming </a>
-            <Link to="/trekked" className="link" target="_blank">
-              Learn More
-            </Link>
-          </div>
-        </div>
-        <div className="right r-three">
-          <img src="../images/travel.JPG" alt="" />
         </div>
       </div>
     </div>

@@ -21,10 +21,10 @@ function Router() {
         <Route path="/shmagity">
           <Shmagity />
         </Route>
-        <Route path="/poolhostNFL">
+        <Route path="/nbapickem">
           <Poolhost />
         </Route>
-        <Route path="/trekked">
+        <Route path="/pixelator">
           <Travel />
         </Route>
       </Switch>

@@ -13,9 +13,9 @@ import {
   SiFirebase,
 } from "react-icons/si";
 import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 import Animation from "../Home/Animation";
-import TDemo from './mp4/trip.mp4'
+import TDemo from "./mp4/pixel.mp4";
 
 function Travel() {
   return (
@@ -29,60 +29,69 @@ function Travel() {
             Home
           </Link>
           <HashLink to="/#projects">Projects</HashLink>
-          <HashLink to="/#contact" className="hide">Contact</HashLink>
+          <HashLink to="/#contact" className="hide">
+            Contact
+          </HashLink>
         </div>
       </div>
       <div className="detail-header">
         <div className="content">
           <div className="desc">
-            <Animation copy="Trekked" role="heading" />
-            <p> Plan and organize your next trip </p>
+            <Animation copy="Pixelator" role="heading" />
+            <p> Create and download pixel art </p>
           </div>
 
-          <img src="../images/trekked.png" alt="" />
+          <img src="../images/pixel-mac.png" alt="" />
         </div>
         <div className="footer-info">
           <p>
             <span>Context</span> Personal Project
           </p>
-          <p>
+          {/* <p>
             <span>Type</span> CRUD
-          </p>
+          </p> */}
         </div>
       </div>
       <section className="detail-overview">
         <div className="detail-intro">
           <h1> Introduction</h1>
           <p>
-            Trekked is a website I created that allows a user to plan their next trip. Using Mapbox, the user can easily find their planned destination on the map and see what's nearby.
+            Pixelator is a webite I created that allows a user to make pixel
+            art. They can then download the art as a JPG or PNG. If the user
+            chooses the favicon canvas size, they can easily make their artwork
+            a favicon in their web project.
           </p>
-          <p> This website was created using <span>React, Javascript, Sass, Node.js, Express, and MongoDB.</span> For the user authentication I used <span>Bcrypt and JWT</span> as well as implemented error handling for incorrect data during the login process. </p>
+          <p>
+            {" "}
+            This website was created using{" "}
+            <span>React, Javascript, and Sass</span> For the export
+            functionality, I use <span>React-component-export-image</span> which
+            allows for fast and easy downloads.{" "}
+          </p>
           <p className="disclaimer">
-            This website is not deployed yet since there is still some things I would like to include that will bring this project to life. I have included a demo video at the bottom.
+            This website is not fully working on iPhones yet.
           </p>
-
-          
         </div>
-      </section>
-      <section className="images">
-        <div className="img">
-          <img src="../images/travel-1.JPG" alt="" />
-          <p> Fast and easy registration </p>
-        </div>
-        <div className="img">
-          <img src="../images/travel-2.JPG" alt="" />
-          <p> View your trip history </p>
-        </div>
-        <div className="img">
-          <img src="../images/travel-3.JPG" alt="" />
-          <p> Start planning your next trip </p>
-        </div>
-        
       </section>
       <div className="demo-section">
-      <p>Watch the demo and see how it works.</p>
-      <video src={TDemo} controls="controls"></video>
+        <p>Watch the demo and see how it works.</p>
+        <video src={TDemo} controls="controls"></video>
       </div>
+      <section className="images">
+        <div className="img">
+          <img src="../images/pixel-1.JPG" alt="" />
+          <p> Start with an empty canvas </p>
+        </div>
+        <div className="img">
+          <img src="../images/pixel-2.JPG" alt="" />
+          <p> Make your masterpiece </p>
+        </div>
+        <div className="img">
+          <img src="../images/pixel-3.JPG" alt="" />
+          <p> Download your art as a PNG or JPG </p>
+        </div>
+      </section>
+
       <div className="tech-used">
         <h1> Technologies Used </h1>
         <div className="skills-wrapper">
@@ -96,18 +105,6 @@ function Travel() {
             </li>
             <li className="skill">
               <SiSass className="skill-icon" /> Sass
-            </li>
-          </ul>
-          <ul className="backend">
-            <li className="skill">
-              <SiExpress className="skill-icon" /> Express
-            </li>
-            <li className="skill">
-              <SiNodedotjs className="skill-icon" />
-              Node.js
-            </li>
-            <li className="skill">
-              <SiMongodb className="skill-icon" /> MongoDB
             </li>
           </ul>
         </div>

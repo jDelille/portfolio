@@ -124,22 +124,16 @@ const About = () => {
               Typescript, and using APIs. Also, on the road to rank 1 in
               Codewars.
             </p>
-            <p> Checkout my Github and Linkedin. </p>
-            <div className="icons">
-              <a href="https://github.com/jDelille" target="_blank">
-                <AiFillGithub className="icon-ab" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/justin-delille/"
-                target="_blank"
-              >
-                <AiFillLinkedin className="icon-ab" />
-              </a>
-            </div>
+            
             <p>
               <span> Looking for work </span> and opportunities to gain
               experience.
             </p>
+            <p className="my-links"> Checkout my <a href="https://github.com/jDelille" target="_blank">Github</a> and  <a
+                href="https://www.linkedin.com/in/justin-delille/"
+                target="_blank"
+              >Linkedin</a> </p>
+
           </div>
           <div className="bottom">
             <h1> Skills </h1>
@@ -218,6 +212,7 @@ const About = () => {
               {!sent ? <p>Send Message </p> : <p> Message Sent</p>}
             </button>
           </form>
+          
         </div>
       </div>
     </section>
