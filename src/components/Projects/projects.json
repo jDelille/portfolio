@@ -1,0 +1,32 @@
+{
+ "projects": [
+  {
+   "id": 1,
+   "type": "Featured Project",
+   "title": "NBA Pick'em",
+   "image": "../images/sockpool.JPG",
+   "description": "Socklord Pick'em Pool is a project I created. It's an NBA daily pick 'em pool where users make picks and compete against others.",
+   "website": "https://poolhost.netlify.app/",
+   "details": "/nbapickem"
+  },
+  {
+   "id": 2,
+   "type": "Featured Project",
+   "title": "Pixelator",
+   "image": "../images/pixelator.JPG",
+   "description": "Pixelator is a website where you can make pixel art and download it as a JPG or PNG.",
+   "website": "https://pixelator123.netlify.app/",
+   "details": "/pixelator"
+  },
+  {
+   "id": 3,
+   "type": "Featured Project",
+   "title": "Shmagity",
+   "image": "../images/shmagity.png",
+   "description": "Shmagity is a website I created that allows a user to store and save their reuseable lines of code. You don't just save code, you save time.",
+   "website": "https://www.shmagity.com/",
+   "details": "/shmagity"
+  }
+ ]
+}
+

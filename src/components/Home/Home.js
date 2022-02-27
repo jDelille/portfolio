@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./Home.scss";
 import Navbar from "../Navbar/Navbar";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-
-import anime from "animejs";
 import Animation from "./Animation";
 import { gsap, Power2, Elastic } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -52,12 +49,12 @@ function Home() {
           <Animation copy="I'm a web developer." role="heading" />
         </div>
         <div className="btn-container">
-          <a onClick={scrollProjects} className="projects-btn">
+          <button onClick={scrollProjects} className="projects-btn">
             Projects
-          </a>
-          <a onClick={scrollAbout} className="contact-btn">
+          </button>
+          <button onClick={scrollAbout} className="contact-btn" >
             Contact
-          </a>
+          </button>
         </div>
       </div>
     </div>
