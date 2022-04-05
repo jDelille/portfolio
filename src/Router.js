@@ -8,7 +8,7 @@ import Contact from "./components/Contact/Contact";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Poolhost from "./components/Details/Poolhost";
 import Travel from "./components/Details/Travel";
-
+import Vibrofret from './components/Details/Vibrofret'
 function Router() {
   return (
     <HashRouter>
@@ -26,6 +26,9 @@ function Router() {
         </Route>
         <Route path="/pixelator">
           <Travel />
+        </Route>
+        <Route path="/vibrofret">
+          <Vibrofret />
         </Route>
       </Switch>
     </HashRouter>

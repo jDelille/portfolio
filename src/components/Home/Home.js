@@ -47,14 +47,14 @@ function Home() {
         <div className="title">
           <Animation copy="Hey I'm Justin." role="heading" />
           <Animation copy="I'm a web developer." role="heading" />
-        </div>
-        <div className="btn-container">
-          <button onClick={scrollProjects} className="projects-btn">
-            Projects
-          </button>
-          <button onClick={scrollAbout} className="contact-btn" >
-            Contact
-          </button>
+          <div className="btn-container">
+            <button onClick={scrollProjects} className="projects-btn">
+              Projects
+            </button>
+            {/* <button onClick={scrollAbout} className="contact-btn">
+              Contact
+            </button> */}
+          </div>
         </div>
       </div>
     </div>

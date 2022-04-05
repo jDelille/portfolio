@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.scss";
 import $ from "jquery";
-import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai'
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 function Navbar() {
   function scrollProjects() {
     document.getElementById("projects").scrollIntoView(true);
@@ -31,7 +31,6 @@ function Navbar() {
   return (
     <>
       <div className="navbar" id="navbar">
-        <div className="nav-contents">
           <div className="brand">
             <h1 onClick={scrollHome}> Justin </h1>
           </div>
@@ -45,14 +44,24 @@ function Navbar() {
             <li className="hide">
               <a onClick={scrollAbout}> Contact </a>
             </li>
+            <div className="icons">
+              <a
+                href="https://github.com/jDelille"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillGithub className="icon" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/justin-delille/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillLinkedin className="icon" />
+              </a>
+            </div>
           </ul>
-          <div className="icons">
-          <a href="https://github.com/jDelille" target='_blank'><AiFillGithub className="icon" /></a>
-          <a href="https://www.linkedin.com/in/justin-delille/" target='_blank'><AiFillLinkedin className="icon" /></a>
-          </div>
-          
-        </div>
-       
+
         {/* <div
         className="circle-nav"
           id={!expand ? "mini" : "expand"}

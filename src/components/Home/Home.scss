@@ -3,36 +3,38 @@
 .homepage {
   width: 100vw;
   height: 90%;
-  color: white;
+  color: var(--primary-light);
   font-family: "Poppins", sans-serif;
   display: flex;
+  background-color: var(--primary-dark);
+
   .left {
-    background-color: var(--secondary-dark);
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 22rem;
+
     .title {
-      height: 30%;
-      width: 80%;
+      height: 50%;
+      width: 100%;
       display: flex;
-      align-items: center;
       position: relative;
-      justify-content: center;
       flex-direction: column;
+      justify-content: flex-start;
+      font-weight: bold;
       span {
         color: pink;
         position: relative;
         animation: move-text 0.75s forwards;
-        font-size: 4rem;
+        font-size: var(--fs-xl);
         bottom: -1em;
         opacity: 0;
-        text-align: center;
-        color: white;
+        color: var(--primary-light);
         &:nth-child(2n) {
-          color: var(--accent);
+          color: var(--primary-light);
         }
       }
 
@@ -49,29 +51,65 @@
           opacity: 1;
         }
       }
-    }
-    .btn-container {
-      width: 80%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      button {
-        padding: 16px 48px;
-        font-size: 1.2rem;
-        border-radius: 4px;
-        border: none;
-        margin-right: 1rem;
-        background-color: #16171f;
-        color: white;
-        text-decoration: none;
-        transition: all 0.5s ease-in-out;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.23);
-        cursor: pointer;
-        &:hover {
+      .btn-container {
+        width: 100%;
+        margin: 2rem auto;
+        display: flex;
+
+        button {
+          padding: 1rem 2.5rem;
+          font-size: var(--fs-500);
+          border: none;
+          margin-right: 1rem;
+          background-color: var(--accent);
+          color: white;
+          text-decoration: none;
           transition: all 0.5s ease-in-out;
-          box-shadow: none;
-          color: var(--accent);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15),
+            0 6px 6px rgba(0, 0, 0, 0.23);
+          cursor: pointer;
+          position: relative;
+
+          &:before {
+            content: '';
+            background-color: rgb(132, 162, 222);
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            transition: all 200ms ease-in-out;
+            left: 0;
+            top: 0;
+
+          }
+          &:hover {
+            transition: all 0.5s ease-in-out;
+            box-shadow: none;
+            color: white;
+          &:before {
+            animation: btn-anim 0.45s forwards;
+
+          }
+          }
         }
+
+        
+      @keyframes btn-anim {
+        // 0% {
+        //   bottom: -0.2em;
+        //   opacity: 1;
+        //   width: 10%;
+        // }
+        // 50% {
+        //   bottom: 0.2em;
+        //   width: 50%;
+        // }
+        100% {
+          opacity: 0;
+          width: 100%;
+          
+          
+        }
+      }
       }
     }
   }
@@ -79,10 +117,13 @@
 
 @media only screen and (max-width: 1615px) {
   .homepage {
+    padding: 0;
     .left {
+      padding: 0 10rem;
+
       .title {
         h1 {
-          font-size: 3.2rem;
+          
         }
       }
       .btn-container {
@@ -95,18 +136,20 @@
   }
 }
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1500px) {
+  
   .homepage {
+    padding: 0;
     .left {
+      padding: 0 7rem;
       .title {
-        padding: 2rem;
+        padding: 0;
         h1 {
-          font-size: 3rem;
+          
         }
       }
       .btn-container {
-        padding: 2rem;
-
+     
         a {
           padding: 14px 40px;
           font-size: 1.2rem;
@@ -117,17 +160,16 @@
 }
 
 @media only screen and (max-width: 1145px) {
+  
   .homepage {
+
     .left {
       width: 100%;
       .title {
-        padding: 2rem;
         h1 {
-          font-size: 2.8rem;
         }
       }
       .btn-container {
-        padding: 2rem;
 
         a {
           padding: 14px 40px;
@@ -142,17 +184,14 @@
   .homepage {
     .left {
       width: 100%;
+      padding: 0 2rem;
       .title {
-        padding: 2rem;
         width: 100%;
         span {
-          font-size: 1.9rem;
-          
         }
       }
       .btn-container {
         display: flex;
-        
 
         a {
           padding: 14px 40px;

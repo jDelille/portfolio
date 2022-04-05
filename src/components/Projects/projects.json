@@ -2,30 +2,49 @@
  "projects": [
   {
    "id": 1,
-   "type": "Featured Project",
-   "title": "NBA Pick'em",
-   "image": "../images/sockpool.JPG",
-   "description": "Socklord Pick'em Pool is a project I created. It's an NBA daily pick 'em pool where users make picks and compete against others.",
-   "website": "https://poolhost.netlify.app/",
-   "details": "/nbapickem"
+   "type": "Guitar App",
+   "title": "Vibrofret",
+   "image": "../images/vibrofret.JPG",
+   "description": "Interactive guitar fretboard where you can view different scales, arpeggios, and modes across the neck.",
+   "website": "https://vibrofret.netlify.app/",
+   "details": "/vibrofret",
+   "built": "Built with Javascript, React and SCSS",
+   "github": "https://github.com/jDelille/guitar-app"
   },
   {
    "id": 2,
-   "type": "Featured Project",
+   "type": "Sports Website",
+   "title": "NBA Pick'em",
+   "image": "../images/sockpool.JPG",
+   "description": "NBA daily pick 'em pool where users make picks, view games, and watch highlights.",
+   "website": "https://www.nbapickem.org/",
+   "details": "/nbapickem",
+   "built": "Built with Javascript, React, MongoDB, SCSS",
+   "github": "https://github.com/jDelille/NBA-pickem"
+  },
+  {
+   "id": 3,
+   "type": "Pixel Art Maker",
    "title": "Pixelator",
    "image": "../images/pixelator.JPG",
    "description": "Pixelator is a website where you can make pixel art and download it as a JPG or PNG.",
    "website": "https://pixelator123.netlify.app/",
-   "details": "/pixelator"
+   "details": "/pixelator",
+   "built": "Built with Javascript, React, SCSS",
+   "github": "https://github.com/jDelille/pixel"
+
   },
   {
-   "id": 3,
-   "type": "Featured Project",
+   "id": 4,
+   "type": "Code Saver",
    "title": "Shmagity",
    "image": "../images/shmagity.png",
-   "description": "Shmagity is a website I created that allows a user to store and save their reuseable lines of code. You don't just save code, you save time.",
+   "description": "Save reusable lines of code to save yourself time setting up your next project.",
    "website": "https://www.shmagity.com/",
-   "details": "/shmagity"
+   "details": "/shmagity",
+   "built": "Built with Javascript, React, MongoDB, SCSS",
+   "github": "https://github.com/jDelille/code-saver"
+
   }
  ]
 }

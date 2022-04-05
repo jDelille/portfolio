@@ -2,7 +2,7 @@
 
 .projects {
  width: 100vw;
-
+ overflow-y: scroll;
  padding: 4rem 0rem;
  font-family: 'Poppins', sans-serif;
  background: var(--primary-dark) url('./images/tile.png') 0 0 repeat;
@@ -12,8 +12,8 @@
   width: 80%;
   margin: 0 auto;
   display: flex;
-  height: 33vw;
-  margin-bottom: 4rem;
+  height: auto;
+  margin-bottom: 8rem;
   .left {
    display: flex;
    flex-direction: column;
@@ -21,22 +21,30 @@
    width: 40%;
    .header {
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
    }
    .site {
     font-size: 3rem;
    }
    .desc {
     font-size: 1.2rem;
-    margin-top: 1rem;
+    font-weight: lighter;
+   }
+   .built-with {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
    }
    .project-btns {
-    margin-top: 2rem;
+    margin-top: 1rem;
     a {
      margin-right: 1rem;
      text-decoration: none;
      color: var(--accent);
-     font-size: 1.3rem;
+     font-size: 1.2rem;
+     font-weight: lighter;
+
     }
    }
   }
@@ -51,11 +59,34 @@
     left: 10%;
     border-radius: 6px;
     perspective: 1000px;
-    filter: brightness(80%);
+    filter: brightness(95%);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14),0 3px 8px rgba(0, 0, 0, 0.14),0 4px 13px rgba(0, 0, 0, 0.18);;
     z-index: 10;
    }
    
+  }
+ }
+}
+
+@media only screen and (max-width: 1500px) {
+ .projects {
+  .project-box {
+   width: 95%;
+   .left {
+    width: 50%;
+    margin-bottom: 2rem;
+   }
+   .right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+     left: 0;
+     right: 0; 
+     
+    }
+   }
   }
  }
 }
@@ -93,14 +124,13 @@
     height: 50%;
     display: flex;
     position: absolute;
-    padding: 1rem;
     top: 0;
-    justify-content: center;
     img {
      position: relative;
-     left: 0;
-     margin: 0 auto;
-     max-width: 100%;
+     
+     min-width: 90%;
+     margin-bottom: 4rem;
+
     }
    }
   }

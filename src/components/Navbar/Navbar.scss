@@ -1,39 +1,39 @@
 .navbar {
-  height: 65px;
+  height: 85px;
   position: absolute;
   display: flex;
   width: 100vw;
   transition: all 2s ease-in-out;
-  padding: 0 2.5rem;
-
-  .nav-contents {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 4rem;
+  padding: 0 22rem;
+  align-items: center;
+  .icons {
+    width: 100px;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    .icons {
-      margin-left: auto;
-      width: 200px;
+    a {
+      height: 100%;
       display: flex;
-      justify-content: space-evenly;
-      .icon {
-        font-size: 2rem;
-        cursor: pointer;
-        color: white;
-      }
+      align-items: center;
+    }
+    .icon {
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: rgb(28, 27, 27);
+      margin: 0;
     }
   }
+
   .brand {
     margin-right: 2rem;
   }
   .nav-links {
     display: flex;
     gap: 1rem;
-    margin-left: 2rem;
     list-style-type: none;
+    margin-left: auto;
     li a {
-      color: white;
+      color: var(--primary-light);
       text-decoration: none;
       font-size: 1.2rem;
       cursor: pointer;
@@ -47,22 +47,40 @@
   }
 }
 
+@media only screen and (max-width: 1615px) {
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12rem;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7rem;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 0 2rem;
     .nav-contents {
-      padding: 0;
       .nav-links {
         margin-left: auto;
         width: 40%;
         display: flex;
         justify-content: space-between;
         position: relative;
-        
+
         li {
-          margin: 0 .5rem;
+          margin: 0 0.5rem;
         }
       }
       .hide {
@@ -106,10 +124,6 @@
 }
 
 .hide {
-  display: none;
-}
-
-.icon {
   display: none;
 }
 
@@ -172,5 +186,4 @@
     color: white;
     text-decoration: none;
   }
-  
 }

@@ -52,18 +52,22 @@ function Projects() {
     <div className="projects" id="projects" ref={ref}>
       {projects.projects.map((project, index) => {
         return (
-          <div className="project-box"  key={index}>
+          <div className="project-box" key={index}>
             <div className="left l-two">
               <h1 className="header"> {project.type} </h1>
               <h1 className="site"> {project.title} </h1>
               <p className="desc">{project.description}</p>
+              <p className="built-with">{project.built}</p>
               <div className="project-btns">
                 <a href={project.website} target="_blank" rel="noreferrer">
                   Visit site
                 </a>
-                <Link to={project.details} className="link" target="_blank">
+                <Link to={project.details} className="link">
                   Learn More
                 </Link>
+                <a href={project.github} target="_blank" rel="noreferrer">
+                  View Github Repo
+                </a>
               </div>
             </div>
             <div className="right r-two">
