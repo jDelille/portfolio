@@ -15,7 +15,7 @@
    "id": 2,
    "type": "Sports Website",
    "title": "NBA Pick'em",
-   "image": "../images/sockpool.JPG",
+   "image": "../images/best-pool-pic.JPG",
    "description": "NBA daily pick 'em pool where users make picks, view games, and watch highlights.",
    "website": "https://www.nbapickem.org/",
    "details": "/nbapickem",
@@ -24,6 +24,17 @@
   },
   {
    "id": 3,
+   "type": "Marvel fan website",
+   "title": "Marvelverse",
+   "image": "../images/marvel-site-cover.png",
+   "description": "View Marvel comics and MCU movies.",
+   "website": "https://marvelverse.netlify.app/",
+   "details": "/shmagity",
+   "built": "Built with Javascript, React, Redux, SCSS",
+   "github": "https://github.com/jDelille/marvel"
+  },
+  {
+   "id": 4,
    "type": "Pixel Art Maker",
    "title": "Pixelator",
    "image": "../images/pixelator.JPG",
@@ -32,20 +43,6 @@
    "details": "/pixelator",
    "built": "Built with Javascript, React, SCSS",
    "github": "https://github.com/jDelille/pixel"
-
-  },
-  {
-   "id": 4,
-   "type": "Code Saver",
-   "title": "Shmagity",
-   "image": "../images/shmagity.png",
-   "description": "Save reusable lines of code to save yourself time setting up your next project.",
-   "website": "https://www.shmagity.com/",
-   "details": "/shmagity",
-   "built": "Built with Javascript, React, MongoDB, SCSS",
-   "github": "https://github.com/jDelille/code-saver"
-
   }
  ]
 }
-

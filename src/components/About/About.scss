@@ -2,8 +2,8 @@
 
 .about {
   width: 100vw;
-  background-color: var(--secondary-dark);
-  color: var(--primary-light);
+  background-color: var(--secondary-light);
+  color: var(--primary-dark);
   font-family: "Poppins", sans-serif;
   position: relative;
   display: flex;
@@ -18,7 +18,7 @@
       width: 50%;
       height: 100%;
       position: relative;
-      background-color: var(--primary-light);
+      background-color: #fff;
       color: var(--secondary-dark);
       display: flex;
       flex-direction: column;
@@ -135,7 +135,7 @@
           overflow: hidden;
           text-transform: uppercase;
           background-color: var(--primary-dark);
-          color: white;
+          color: rgb(29, 29, 29);
           border: none;
           display: flex;
           align-items: center;
@@ -147,7 +147,7 @@
         textarea {
           height: 50px;
           outline: none;
-          color: white;
+          color: rgb(240, 234, 234);
           font-size: 1.5rem;
           border: none;
           background-color: #0e0f13;

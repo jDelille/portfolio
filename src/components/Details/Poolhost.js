@@ -39,26 +39,24 @@ function Poolhost() {
       <section className="shmagity-page">
         <div className="details-nav">
           <div className="brand">
-            <h1> Justin </h1>
+            
+            <HashLink to="/"> <h1> Justin </h1> </HashLink>
           </div>
           <div className="links">
-            <Link to="/" className="link">
-              Home
-            </Link>
-            <HashLink to="/#projects">Projects</HashLink>
-            <HashLink to="/#contact" className="hide">
-              Contact
-            </HashLink>
+            
+          <HashLink to="/#projects">Back to projects</HashLink>
+          
           </div>
         </div>
         <div className="detail-header">
           <div className="content">
             <div className="desc">
-              <Animation copy="NBA Pick'em" role="heading" />
+              {/* <Animation copy="NBA Pick'em" role="heading" /> */}
+              <h1> NBA Pick'em</h1>
               <p> Daily NBA pick 'em pool </p>
             </div>
 
-            <img src="../images/sock-mac.png" alt="" />
+            <img src="../images/pool-mac.png" alt="" />
           </div>
           <div className="footer-info">
             <p>
@@ -80,7 +78,7 @@ function Poolhost() {
             <p>
               This website was created using
               <span>
-                React, Javascript, SCSS, Node.js, Express, and MongoDB.
+                {" "} React, Javascript, SCSS, Node.js, Express, and MongoDB.
               </span>
             </p>
 
@@ -89,7 +87,7 @@ function Poolhost() {
               better features for the user to make their experience awesome.
             </p>
 
-            <a href="https://www.nbapickem.org/">Visit Site</a>
+            <a href="https://www.nbapickem.org/" target="_blank" rel="noreferrer">Visit Site</a>
           </div>
         </section>
         <div className="demo-section">

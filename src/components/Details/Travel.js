@@ -36,17 +36,13 @@ function Travel() {
       <Transition timeline={home} />
       <section className="shmagity-page">
         <div className="details-nav">
-          <div className="brand">
-            <h1> Justin </h1>
+        <div className="brand">
+            <HashLink to="/">
+              <h1> Justin </h1>
+            </HashLink>
           </div>
           <div className="links">
-            <Link to="/" className="link">
-              Home
-            </Link>
-            <HashLink to="/#projects">Projects</HashLink>
-            <HashLink to="/#contact" className="hide">
-              Contact
-            </HashLink>
+          <HashLink to="/#projects">Back to projects</HashLink>
           </div>
         </div>
         <div className="detail-header">
