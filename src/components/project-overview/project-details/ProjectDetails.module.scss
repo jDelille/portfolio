@@ -1,0 +1,123 @@
+@use "@/scss/breakpoints" as *;
+
+.projectDetails {
+  width: 100vw;
+  height: fit-content;
+  padding: 5rem 0rem;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  width: 100vw;
+  background-color: #f1f1f1;
+  color: black;
+  @include breakpoint(md) {
+    padding: 2rem 0;
+  }
+  @include breakpoint(sm) {
+    padding: 2rem 0;
+    margin: unset;
+  }
+
+  .detailsWrapper {
+    width: 1300px;
+    display: flex;
+    gap: 1rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+    @include breakpoint(md) {
+      max-width: 1100px;
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+    @include breakpoint(sm) {
+      max-width: 100%;
+      padding: unset;
+      margin: unset;
+      flex-direction: column;
+    }
+
+    .siteImages {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      align-items: center;
+      
+      height: 50%;
+      @include breakpoint(md) {
+        padding-top: 4rem;
+        width: 100%;
+      }
+      @include breakpoint(sm) {
+        width: 100%;
+        padding-top: 1rem;
+      }
+
+      img {
+        max-width: 100%;
+
+        @include breakpoint(md) {
+          max-width: 100%;
+        }
+        @include breakpoint(sm) {
+          width: 98%;
+          padding: 0 1rem;
+        }
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: all 200ms ease-in-out;
+          @include breakpoint(sm) {
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    @include breakpoint(md) {
+      width: 90%;
+      height: 100%;
+    }
+    @include breakpoint(sm) {
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    .purpose,
+    .build {
+      margin: 0 auto;
+
+      @include breakpoint(sm) {
+        padding: 2rem 0;
+        margin: unset;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      p {
+        line-height: 24px;
+        width: 80%;
+        font-size: 16px;
+        @include breakpoint(md) {
+          width: 90%;
+        }
+        @include breakpoint(sm) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@use "@/scss/breakpoints" as *;
+
+.hero {
+  width: 100%;
+  max-width: 496px;
+  min-width: 496px;
+  height: 90vh;
+  position: relative;
+  padding: 80px 45px;
+  max-height: 1200px;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .bio {
+    margin-top: 1.5rem;
+    color: white;
+    line-height: 2rem;
+    font-size: 17px;
+    span {
+      // color: #52a8ff;
+      // font-weight: 500;
+    }
+  }
+
+  .info {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 2rem;
+    padding-top: 2rem;
+    @include breakpoint(sm) {
+      position: relative;
+      margin-top: 4rem;
+    }
+    img {
+      max-width: 45px;
+      border-radius: 50%;
+      margin-right: 2rem;
+      @include breakpoint(sm) {
+        margin-right: 10px;
+      }
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      gap: 0.95rem;
+      margin-right: 2rem;
+      cursor: pointer;
+      @include breakpoint(sm) {
+        gap: 7px;
+        margin: 15px;
+      }
+      &:hover {
+        color: #52a8ff;
+
+        svg {
+          color: #52a8ff;
+        }
+
+        // .github-icon {
+        //   fill: orange;
+        // }
+        // .linkedin-icon {
+        //   path {
+        //     &:nth-child(1) {
+        //       fill: orange;
+        //     }
+        //   }
+        // }
+      }
+      p {
+        font-size: 14px;
+      }
+      svg {
+        width: 12px;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.projects {
+  width: 100%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  height: fit-content;
+  transition: all 200ms ease-in-out;
+}

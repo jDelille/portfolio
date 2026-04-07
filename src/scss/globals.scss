@@ -1,0 +1,81 @@
+@use "./breakpoints" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #000000;
+  color: #ededed;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  all: unset;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  @include breakpoint(sm) {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  @include breakpoint(md) {
+    padding: 16px;
+  }
+  .layout {
+    width: 1440px;
+    max-width: 1340px;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      max-width: 100%;
+    }
+
+    .fixed {
+      position: fixed;
+      @include breakpoint(sm) {
+        position: relative;
+      }
+    }
+
+    .scroll {
+      margin-left: auto;
+      min-height: 100vh;
+      position: relative;
+      padding-top: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      @include breakpoint(sm) {
+        margin: unset;
+      }
+    }
+  }
+}
+
+.project-page {
+  flex-direction: column;
+  overflow-x: hidden;
+}

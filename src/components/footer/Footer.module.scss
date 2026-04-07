@@ -1,0 +1,40 @@
+@use "@/scss/breakpoints" as *;
+
+.footer {
+  background-color: #1b1b1b;
+  padding: 2rem 1rem;
+
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 1300px;
+    margin: 0 auto;
+    @include breakpoint(sm) {
+      align-items: flex-start;
+      padding: 2rem 1rem;
+    }
+
+    .links {
+      padding: 2rem 0;
+      display: flex;
+      gap: 1rem;
+      font-weight: 600;
+      @include breakpoint(sm) {
+        flex-direction: column;
+      }
+    }
+
+    .copyright {
+      font-size: 14px;
+			padding-bottom: 2rem;
+			font-style: italic;
+    }
+
+    .scrollToTop {
+      cursor: pointer;
+    }
+  }
+}

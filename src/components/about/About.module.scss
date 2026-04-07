@@ -1,0 +1,102 @@
+@use "@/scss/breakpoints" as *;
+
+.about {
+  width: 648px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  height: fit-content;
+  transition: all 200ms ease-in-out;
+  height: fit-content;
+  padding-top: 2rem;
+  h1 {
+    margin-bottom: 0.5rem;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  p {
+    color: white;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  @include breakpoint(md) {
+    min-width: 536px;
+    max-width: 536px;
+    padding: 16px;
+  }
+  @include breakpoint(sm) {
+    max-width: 100%;
+    min-width: 100%;
+    margin: unset;
+    margin-top: 6rem;
+    padding: 0;
+  }
+
+  .skills {
+    margin-top: 3rem;
+    border-top: 1px solid #333333;
+    padding-top: 2rem;
+    ul {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      color: white;
+
+    }
+  }
+
+  .experience,
+  .education {
+    margin-top: 3rem;
+    border-top: 1px solid #333333;
+    padding-top: 2rem;
+    position: relative;
+    .wrapper {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      .date {
+        width: fit-content;
+        text-wrap: nowrap;
+        width: 80px;
+        p {
+          font-size: 12px;
+          line-height: unset;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          color: #52a8ff;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .company {
+      display: flex;
+      flex-direction: column;
+      // gap: 0.75rem;
+
+      img {
+        max-width: 30px;
+        height: 30px;
+        border-radius: 6px;
+        object-fit: contain;
+      }
+      h2 {
+        font-size: 18px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+      }
+      p {
+        font-size: 16px;
+        line-height: unset;
+        line-height: 26px;
+        padding-top: 1rem;
+      }
+    }
+  }
+}
