@@ -1,5 +1,63 @@
 @use "@/scss/breakpoints" as *;
 
+
+.nextWorkContainer {
+		width: 100%;
+		background-color: white;
+		color: black;
+		display: block;
+		position: relative;
+		height: 200px;
+		&:after {
+			content: '';
+			position: absolute;
+			background-color: black;
+			top: 0;
+			display: block;
+			width: 100%;
+			left: 0;
+			height: 100%;
+			transition: -webkit-transform 0.38s cubic-bezier(0.694, 0.048, 0.335, 1);
+			transition: transform 0.38s cubic-bezier(0.694, 0.048, 0.335, 1);
+			transition: transform 0.38s cubic-bezier(0.694, 0.048, 0.335, 1),
+				-webkit-transform 0.38s cubic-bezier(0.694, 0.048, 0.335, 1);
+			-webkit-transform: translateY(-100%);
+			transform: translateY(-100%);
+		}
+
+		&:hover:after {
+			height: 100%;
+			transform: translateY(0%);
+			@include breakpoint(sm) {
+				transform: none;
+			}
+		}
+
+		&:hover > .wrapper {
+			color: lightgray;
+			transition: all 200ms ease-in-out;
+		}
+
+		&:hover > .wrapper .arrow {
+			transform: translateX(50px);
+			transition: all 200ms ease-in-out;
+			transition-delay: 0.2s;
+		}
+
+		&:hover > .wrapper .arrow path {
+			fill: lightgray;
+			transition-delay: 0.2s;
+		}
+
+		@include breakpoint(sm) {
+			&:focus:after {
+				height: 100%;
+				transform: translateY(0%);
+			}
+		}
+
+  }
+
 .wrapper {
   width: 1300px;
   margin: 0 auto;

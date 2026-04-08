@@ -21,13 +21,14 @@
     position: relative;
     gap: 1rem;
 
+
     @include breakpoint(md) {
-      max-width: 100%;
       padding: 2rem 0;
+      width: 100%;
     }
     @include breakpoint(sm) {
       max-width: 100%;
-      margin: unset;
+      padding: 2rem 1rem;
     }
   }
 

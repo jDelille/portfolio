@@ -70,6 +70,7 @@ a {
       gap: 2rem;
       @include breakpoint(sm) {
         margin: unset;
+        padding-bottom: 0;
       }
     }
   }
@@ -78,4 +79,8 @@ a {
 .project-page {
   flex-direction: column;
   overflow-x: hidden;
+
+  @include breakpoint(sm) {
+    padding: 0;
+  }
 }

@@ -51,14 +51,16 @@ const ProjectDescription = ({ project }: ProjectDescriptionProps) => {
         </h1>
         <p ref={paragraphRef}>{project.projectIntro}</p>
 
-        <Link
-          href={project.link}
-          target="_blank"
-          className={styles.websiteLink}
-          ref={buttonRef}
-        >
-          View Project
-        </Link>
+        {project.projectWebsiteLink && (
+          <Link
+            href={project.projectWebsiteLink}
+            target="_blank"
+            className={styles.websiteLink}
+            ref={buttonRef}
+          >
+            View Project
+          </Link>
+        )}
       </div>
     </div>
   );

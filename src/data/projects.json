@@ -51,7 +51,9 @@
       "nextProject": "Fretify",
       "nextProjectLink": "/project/fretify",
       "projectColor": "#7367FE",
-      "nextIsNPM": false
+      "nextIsNPM": false,
+            "projectWebsiteLink": null
+
     },
     {
       "id": 2,

@@ -9,14 +9,36 @@
   padding: 80px 45px;
   max-height: 1200px;
 
+  @include breakpoint(md) {
+    padding: 16px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  @include breakpoint(sm) {
+    max-width: 100%;
+    height: fit-content;
+  }
+
   h1 {
     font-size: 3rem;
     font-weight: 700;
+
+    @include breakpoint(md) {
+      font-size: 46px;
+    }
+    @include breakpoint(sm) {
+      font-size: 38px;
+    }
   }
 
   h2 {
     font-size: 1.75rem;
     margin-top: 0.5rem;
+
+    @include breakpoint(sm) {
+      font-size: 22px;
+    }
   }
 
   .bio {
@@ -24,9 +46,17 @@
     color: white;
     line-height: 2rem;
     font-size: 17px;
-    span {
-      // color: #52a8ff;
-      // font-weight: 500;
+
+    @include breakpoint(lg) {
+      max-width: 496px;
+      min-width: 496px;
+    }
+    @include breakpoint(md) {
+      max-width: 400px;
+    }
+    @include breakpoint(sm) {
+      min-width: 100%;
+      line-height: 24px;
     }
   }
 
@@ -66,17 +96,6 @@
         svg {
           color: #52a8ff;
         }
-
-        // .github-icon {
-        //   fill: orange;
-        // }
-        // .linkedin-icon {
-        //   path {
-        //     &:nth-child(1) {
-        //       fill: orange;
-        //     }
-        //   }
-        // }
       }
       p {
         font-size: 14px;
