@@ -14,7 +14,7 @@ const Footer = () => {
             <Link href={"/project/muunifi"}>Muunifi</Link>
           </li>
           <li>
-            <Link href={"/project/fretify"}>Fretify</Link>
+            <Link href={"/project/guitlab"}>Guitlab</Link>
           </li>
         </ul>
         <div className={styles.copyright}>
